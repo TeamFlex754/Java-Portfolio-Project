@@ -10,7 +10,8 @@ public class Main {
             System.out.println("Choose an option:");
             System.out.println("1. Add a new vehicle");
             System.out.println("2. Display all vehicles");
-            System.out.println("3. Exit");
+            System.out.println("3. Remove a vehicle");
+            System.out.println("4. Exit");
             int choice = scanner.nextInt();
             scanner.nextLine(); // Consume the newline character
 
@@ -22,6 +23,9 @@ public class Main {
                     inventory.displayCars(); // Call the method to display all vehicles
                     break;
                 case 3:
+                    inventory.removeVehicle();
+                    break;
+                case 4:
                     running = false; // Exit the loop
                     System.out.println("Exiting the program...");
                     break;
