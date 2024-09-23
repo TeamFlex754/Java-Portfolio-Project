@@ -7,7 +7,7 @@ public class Car {
     private int mileage;
 
     // Constructor
-    public Car(String make, String model, String color, int year, int mileage) {  // Constructor of car class
+    public Car(String make, String model, String color, int year, int mileage) {
         this.make = make;
         this.model = model;
         this.color = color;
@@ -54,12 +54,14 @@ public class Car {
     public void setMileage(int mileage) {
         this.mileage = mileage;
     }
+
+    // Method to display the car details
     public void displayCarDetails() {
         System.out.println("Make: " + make);
         System.out.println("Model: " + model);
         System.out.println("Color: " + color);
         System.out.println("Year: " + year);
-        System.out.println("Mileage: " + mileage);
+        System.out.println("Mileage: " + mileage + "\n");
     }
 }
 /*
