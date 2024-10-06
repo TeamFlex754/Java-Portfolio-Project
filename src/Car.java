@@ -55,6 +55,15 @@ public class Car {
         this.mileage = mileage;
     }
 
+    @Override
+    public String toString() {
+        return "Make: " + make +
+                "\nModel: " + model +
+                "\nColor: " + color +
+                "\nYear: " + year +
+                "\nMileage: " + mileage;
+    }
+
     // Method to display the car details
     public void displayCarDetails() {
         System.out.println("Make: " + make);
@@ -64,11 +73,4 @@ public class Car {
         System.out.println("Mileage: " + mileage + "\n");
     }
 }
-/*
-    All methods needs try/ catch constructs with success or failure messages
 
-    Display a message asking if the user wants to print the information to a file (Y or N).
-    Use a scanner to capture the response. If "Y", print the file to a predefined location (e.g., C:\Temp\Autos.txt).
-    Note: you may want to create a method to print the information in the main class.
-    If "N", indicate that a file will not be printed.
-*/

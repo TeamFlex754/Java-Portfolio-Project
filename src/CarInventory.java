@@ -6,6 +6,11 @@ public class CarInventory {
     // ArrayList of Car objects
     private ArrayList<Car> cars = new ArrayList<>();
 
+    // Getter to get cars for the file writer
+    public ArrayList<Car> getCars() {
+        return cars;
+    }
+
     // Method to add a new car
     public void addNewCar() {
         Scanner scanner = new Scanner(System.in);

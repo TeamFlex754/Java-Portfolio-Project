@@ -1,3 +1,5 @@
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class Main {
@@ -26,6 +28,26 @@ public class Main {
                     break;
                 case 2:
                     inventory.displayCars(); // Call the method to display all cars
+
+                    // Ask if user wants to print cars to file
+                    System.out.println("Do you want to print the car information to a file? (Y/N): ");
+                    String response = scanner.nextLine().toUpperCase();
+
+                    if (response.equals("Y")) {
+                        // Directly writing the contents of the cars list to a file
+                        try (FileWriter writer = new FileWriter("C:\\Temp\\Autos.txt")) {
+                            for (Car car : inventory.getCars()) { // Assuming cars is public or accessible
+                                writer.write(car.toString() + "\n"); // Assuming Car has a toString() method
+                            }
+                            System.out.println("File has been written to: C:\\Temp\\Autos.txt");
+                        } catch (IOException e) {
+                            System.out.println("Error writing to file: " + e.getMessage());
+                        }
+                    } else if (response.equals("N")) {
+                        System.out.println("No file will be printed.");
+                    } else {
+                        System.out.println("Invalid input. Please enter Y or N.");
+                    }
                     break;
                 case 3:
                     inventory.removeCar(); // Call the method to remove a car
